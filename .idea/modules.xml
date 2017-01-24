@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/stroi.iml" filepath="$PROJECT_DIR$/.idea/stroi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/message_builder.iml" filepath="$PROJECT_DIR$/.idea/message_builder.iml" />
     </modules>
   </component>
 </project>

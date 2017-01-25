@@ -27,7 +27,7 @@
                             <label for="email" class="col-md-4 control-label">Логин</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="text" class="form-control" name="email" value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -36,16 +36,28 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('location') ? 'has-error' : '' }}">
-                            <label for="location" class="col-md-4 control-label">Регион</label>
+                        <div class="form-group{{ $errors->has('region') ? 'has-error' : '' }}">
+                            <label for="region" class="col-md-4 control-label">Регион</label>
                             <div class="col-md-6">
-                                <input id="location" type="text" class="form-control" name="location" value="{{ old('location') }}"
-                                required />
-                                @if ($errors->has('location'))
+                                <input id="region" type="text" class="form-control" name="region" value="{{ old('region') }}"
+                                       required />
+                                @if ($errors->has('region'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('location') }}</strong>
+                                        <strong>{{ $errors->first('region') }}</strong>
                                     </span>
-                                    @endif
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('city') ? 'has-error' : '' }}">
+                            <label for="city" class="col-md-4 control-label">Город</label>
+                            <div class="col-md-6">
+                                <input id="city" type="text" class="form-control" name="city" value="{{ old('city') }}"
+                                       required />
+                                @if ($errors->has('city'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('city') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
                         <div class="form-group{{ $errors->has('position') ? 'has-error' : '' }}">

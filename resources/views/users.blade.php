@@ -22,7 +22,11 @@
                 </tr>
                 <tr>
                     <td>Регион:</td>
-                    <td>{{ $user->location }}</td>
+                    <td>{{ $user->region }}</td>
+                </tr>
+                <tr>
+                    <td>Город:</td>
+                    <td>{{ $user->city }}</td>
                 </tr>
                 <tr>
                     <td>Должность</td>

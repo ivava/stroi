@@ -11,7 +11,7 @@
     <title>{{ config('app.name', '') }}</title>
 
     <!-- Styles -->
-    <link href="../resources/assets/css/app.css" rel="stylesheet">
+    <link href="../../resources/assets/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>

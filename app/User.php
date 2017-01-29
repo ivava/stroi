@@ -15,7 +15,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','location','position','isAdmin','parent_user','departament'
+        'name', 'email', 'password','position','isAdmin','parent_user','departament','region',
+        'city'
     ];
 
     /**
@@ -26,4 +27,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /*
+     * Возвращает регион присвоенный пользователю
+     * return Region
+     */
+    public function region() {
+        return $this->belongsTo(Region::class);
+    }
 }

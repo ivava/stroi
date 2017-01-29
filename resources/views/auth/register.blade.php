@@ -39,8 +39,11 @@
                         <div class="form-group{{ $errors->has('region') ? 'has-error' : '' }}">
                             <label for="region" class="col-md-4 control-label">Регион</label>
                             <div class="col-md-6">
-                                <input id="region" type="text" class="form-control" name="region" value="{{ old('region') }}"
-                                       required />
+                               <select name="region" id="region">
+                                   @foreach($regions as $region)
+                                       <option value="{{ $region->id }}">{{ $region->name }}</option>
+                                       @endforeach
+                               </select>
                                 @if ($errors->has('region'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('region') }}</strong>

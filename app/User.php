@@ -27,4 +27,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /*
+     * Возвращает регион присвоенный пользователю
+     * return Region
+     */
+    public function region() {
+        return $this->belongsTo(Region::class);
+    }
 }

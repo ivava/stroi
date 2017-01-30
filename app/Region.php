@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
+use App\City;
 
 class Region extends Model
 {
@@ -13,5 +15,8 @@ class Region extends Model
      */
     public function users() {
         return $this->hasMany(User::class);
+    }
+    public function cities() {
+        return $this->hasMany(City::class);
     }
 }

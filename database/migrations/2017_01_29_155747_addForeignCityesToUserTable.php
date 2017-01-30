@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRegionsTable extends Migration
+class AddForeignCityesToUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateRegionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('regions', function (Blueprint $table) {
-            $table->increments('id')->unsigned();
-            $table->string('name');
-            $table->timestamps();
-
+        Schema::table('users', function(Blueprint $table) {
+            $table->foreign('city')->references('id')->on('cities');
         });
     }
 
@@ -28,6 +25,8 @@ class CreateRegionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('regions');
+        Schema::table('users', function(Blueprint $table) {
+            $table->dropForeign('users_city_foreign');
+        });
     }
 }

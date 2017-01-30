@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('departament')->index();
             $table->string('position');
             $table->string('parent_user')->index();
-            $table->string('city')->index();
+            $table->integer('city')->unsigned();
             $table->string('region')->index();
             $table->rememberToken();
             $table->timestamps();
@@ -36,6 +36,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::dropIfExists('users');
     }
 }

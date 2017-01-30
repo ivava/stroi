@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Region;
+use App\City;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;

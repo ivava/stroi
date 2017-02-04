@@ -18,7 +18,7 @@ class CitiesTableSeeder extends Seeder
             ],
             [
                 'name' => 'Казань',
-                'region' => '2'
+                'region' =>     2
             ]
     ]);
     }

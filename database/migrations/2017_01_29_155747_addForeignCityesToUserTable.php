@@ -16,6 +16,7 @@ class AddForeignCityesToUserTable extends Migration
         Schema::table('users', function(Blueprint $table) {
             $table->foreign('city')->references('id')->on('cities');
             $table->foreign('region')->references('id')->on('regions');
+            $table->foreign('departament')->references('id')->on('departaments');
         });
     }
 
@@ -29,8 +30,13 @@ class AddForeignCityesToUserTable extends Migration
         Schema::table('users', function(Blueprint $table) {
             $table->dropForeign('users_city_foreign');
         });
+
         Schema::table('users', function(Blueprint $table) {
             $table->dropForeign('users_region_foreign');
+        });
+
+        Schema::table('users', function(Blueprint $table) {
+           $table->dropForeign('users_departament_foreign');
         });
     }
 }

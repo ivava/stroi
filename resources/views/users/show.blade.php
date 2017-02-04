@@ -13,7 +13,7 @@
                 </h3>
                 <p>region:</p>
                 <h3>
-                    {{ $region->name }}
+                    <a href="/public/regions/{{ $region->id }}">{{ $region->name }}</a>
                 </h3>
             </div>
 

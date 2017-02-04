@@ -54,8 +54,13 @@
                         <div class="form-group{{ $errors->has('city') ? 'has-error' : '' }}">
                             <label for="city" class="col-md-4 control-label">Город</label>
                             <div class="col-md-6">
-                                <input id="city" type="text" class="form-control" name="city" value="{{ old('city') }}"
-                                       required />
+                               <select name="city" id="city">
+                                   @foreach($cities as $city)
+                                       <option value="{{ $city->id }}">
+                                           {{ $city->name }}
+                                       </option>
+                                       @endforeach
+                               </select>
                                 @if ($errors->has('city'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('city') }}</strong>

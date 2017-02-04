@@ -16,11 +16,14 @@ class CreateDepartamentsTable extends Migration
         Schema::create('departaments', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('city')->index();
-            $table->string('region')->index();
-            $table->string('lead')->index();
+            $table->integer('city')->unsigned();
+            $table->integer('region')->unsigned();
+            $table->integer('lead')->unsigned();
             $table->integer('workman_count');
             $table->timestamps();
+
+            $table->foreign('city')->references('id')->on('cities');
+            $table->foreign('region')->references('id')->on('regions');
 
         });
     }

@@ -4,6 +4,9 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Region;
+use App\City;
+use App\Departament;
 
 class User extends Authenticatable
 {
@@ -28,11 +31,25 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /*
-     * Возвращает регион присвоенный пользователю
-     * return Region
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function region() {
         return $this->belongsTo(Region::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function City() {
+        return $this->belongsTo(City::class);
+    }
+
+
+    /**\
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function departament() {
+        return $this->belongsTo(Departament::class);
     }
 }

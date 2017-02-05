@@ -34,22 +34,22 @@ class User extends Authenticatable
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function region() {
-        return $this->belongsTo(Region::class);
+    public function getRegion() {
+        return $this->belongsTo(Region::class, 'region');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function City() {
-        return $this->belongsTo(City::class);
+    public function getCity() {
+        return $this->belongsTo(City::class, 'city');
     }
 
 
     /**\
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function departament() {
-        return $this->belongsTo(Departament::class);
+    public function getDepartament() {
+        return $this->belongsTo(Departament::class, 'departament');
     }
 }

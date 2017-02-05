@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/profile', 'UserController@profile');
+
 Route::get('/all', 'UserListController@allUsers');
 
 

@@ -68,6 +68,21 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group{{ $errors->has('region') ? 'has-error' : '' }}">
+                            <label for="region" class="col-md-4 control-label">Отдел</label>
+                            <div class="col-md-6">
+                                <select name="departament" id="departament">
+                                    @foreach($departaments as $departament)
+                                        <option value="{{ $departament->id }}">{{ $departament->name }}</option>
+                                    @endforeach
+                                </select>
+                                @if ($errors->has('departament'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('departament') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
                         <div class="form-group{{ $errors->has('position') ? 'has-error' : '' }}">
                             <label for="position"  class="col-md-4 control-label">Должность</label>
                             <div class="col-md-6">
@@ -77,16 +92,6 @@
                                     <span class="help-block">
                                         <strong>{{ $errors->first('position') }}</strong>
                                     </span>
-                                    @endif
-                            </div>
-                        </div>
-                        <div class="form-group{{ $errors->has('position') ? 'has-error' : '' }}">
-                            <label for="departament" class="col-md-4 control-label">Отдел</label>
-                            <div class="col-md-6">
-                                <input id="departament" type="text" class="form-control" name="departament"
-                                value="{{ old('departament') }}" required />
-                                @if ($errors->has('departament'))
-                                    <strong>{{ $errors->first('departament') }}</strong>
                                     @endif
                             </div>
                         </div>

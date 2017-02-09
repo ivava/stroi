@@ -20,6 +20,7 @@ class CreateDepartamentsTable extends Migration
             $table->integer('region')->unsigned();
             $table->integer('lead')->unsigned();
             $table->integer('workman_count');
+            $table->integer('coordinat');
             $table->timestamps();
 
             $table->foreign('city')->references('id')->on('cities');

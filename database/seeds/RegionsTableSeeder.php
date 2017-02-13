@@ -13,10 +13,7 @@ class RegionsTableSeeder extends Seeder
     {
        DB::table('regions')->insert([
            [
-               'name' => 'Ленинградская область'
-           ],
-           [
-               'name' => 'Татарстан'
+               'name' => 'Минск'
            ]
        ]);
     }

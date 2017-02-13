@@ -20,6 +20,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/profile', 'UserController@profile');
 
+Route::get('/page', 'pageController@index');
+
 Route::get('/all', 'UserListController@allUsers');
 
 

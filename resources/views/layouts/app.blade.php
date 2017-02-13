@@ -3,7 +3,9 @@
         @include('layouts.head')
 <body>
         @include('layouts.nav')
-
+        @if (Auth::user())
+            @include('layouts.sidebar')
+            @endif
         @yield('content')
 
 

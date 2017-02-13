@@ -13,19 +13,48 @@ class DepartamentsTableSeeder extends Seeder
     {
         DB::table('departaments')->insert([
             [
-                'name' => 'Отдел лени',
-                'city' => 1,
-                'region' => 1,
+                'name' => 'ПАСЧ №14 г.Минск',
+                'city_id' => 2,
+                'region_id' => 1,
                 'lead' => 2,
                 'workman_count' => 10
             ],
             [
-                'name' => 'Отдел бани',
-                'city' => 2,
-                'region' => 2,
+                'name' => 'ПАСЧ №14 г.Минск',
+                'city_id' => 2,
+                'region_id' => 1,
                 'lead' => 2,
                 'workman_count' => 25
+            ],
+            [
+                'name' => 'ПАСЧ №21 РУП МАЗ',
+                'city_id' => 2,
+                'region_id' => 1,
+                'lead' => 2,
+                'workman_count' => 10
+            ],
+            [
+                'name' => 'ПАСЧ №27 ТЭЦ-3 Минскэнерго и МП3',
+                'city_id' => 2,
+                'region_id' => 1,
+                'lead' => 2,
+                'workman_count' => 10
+            ],
+            [
+                'name' => 'ПАСЧ №3 г. Минск',
+                'city_id' => 2,
+                'region_id' => 1,
+                'lead' => 2,
+                'workman_count' => 10
+            ],
+            [
+                'name' => 'ЦОУ',
+                'city_id' => 2,
+                'region_id' => 1,
+                'lead' => 2,
+                'workman_count' => 10
             ]
+
         ]);
     }
 }

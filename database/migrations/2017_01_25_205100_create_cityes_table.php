@@ -16,10 +16,10 @@ class CreateCityesTable extends Migration
         Schema::create('cities', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('name');
-            $table->integer('region')->unsigned();
+            $table->integer('region_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('region')->references('id')->on('regions');
+            $table->foreign('region_id')->references('id')->on('regions');
         });
     }
 

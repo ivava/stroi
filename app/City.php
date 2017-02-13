@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Region;
+use App\City;
 
 class City extends Model
 {
@@ -22,7 +23,15 @@ class City extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Region() {
-        return $this->belongsTo(Region::class);
+    public function region() {
+
+        return $this->belongsTo(Region::class, 'region');
+
+    }
+
+    public function departaments() {
+
+        return $this->hasMany(Departament::class);
+
     }
 }

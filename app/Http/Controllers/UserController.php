@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Region;
+use App\City;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -32,6 +33,7 @@ class UserController extends Controller
         $region = $user->getRegion;
         $city = $user->getCity;
         $departament = $user->getDepartament;
-        return view('users.profile', compact('user', 'region', 'city', 'departament'));
+        $regions = Region::all();
+        return view('users.profile', compact('user', 'region', 'regions', 'city', 'departament'));
     }
 }

@@ -1,3 +1,3 @@
-// $(document).ready(function() {
-//    $('.region_hierarhy').jstree();
-// });
+$(document).ready(function() {
+   $('#regionHeirarhy').jstree();
+});

@@ -1,4 +1,4 @@
-
+<div id="regionHeirarhy">
 <ul class="region_hierarhy">
     @foreach($regions as $reg)
         <li data-jstree="{opened: true}">
@@ -22,4 +22,5 @@
         </li>
         @endforeach
 </ul>
+    </div>
 

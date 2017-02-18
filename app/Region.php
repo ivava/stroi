@@ -7,28 +7,24 @@ use App\User;
 use App\City;
 use App\Departament;
 
-class Region extends Model
+class Region extends BaseModel
 {
     protected $fillable = ['name'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function users() {
-        return $this->hasMany(User::class);
-    }
+   public function getChild()
+   {
+       return $this->hasMany(City::class);
+   }
+
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return bool
      */
-    public function cities() {
-        return $this->hasMany(City::class);
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function departaments() {
-        return $this->hasMany(Departament::class);
-    }
+   public function getParent()
+   {
+       return false;
+   }
 }

@@ -19,11 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->boolean('isAdmin')->default(false);
-            $table->integer('departament')->unsigned();
             $table->string('position');
             $table->integer('parent_user')->unsigned();
-            $table->integer('city')->unsigned();
-            $table->integer('region')->unsigned();
+            $table->integer('local_id')->unsigned();
             $table->rememberToken();
             $table->timestamps();
         });

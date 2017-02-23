@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h3>
-                    {{ $region->name }}
+                    {{ $locale->name }}
                 </h3>
 
                 <ul>

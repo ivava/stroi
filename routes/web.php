@@ -50,7 +50,7 @@ Route::get('/users/{id}', 'UserController@show');
 
 Route::get('/cities/{id}', 'CitiesController@show');
 
-Route::get('/regions/{id}', 'RegionsController@show');
+Route::get('/regions/{id}', 'PagesController@showLocale');
 
 
 

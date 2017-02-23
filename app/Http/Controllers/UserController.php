@@ -19,10 +19,11 @@ class UserController extends Controller
     public function show($id) {
         $user = User::findOrFail($id);
         $region = $user->getParentLocal;
+        $locales = LocalObject::getAllLocalObjects();
         if(is_null($user)) {
             abort(404);
         }
-        return view('users.show', compact('user', 'region'));
+        return view('users.show', compact('user', 'region', 'locales'));
     }
 
 

@@ -30,6 +30,19 @@ class LocalObject extends BaseModel
     }
 
     /**
+     * @return array
+     */
+    public static function getAllLocalObjects()
+    {
+
+        $regions = self::getObjectByType(self::REGION);
+        return array(
+            'regions' => $regions
+        );
+
+    }
+
+    /**
      * @param $id
      * @return Collection
      */
@@ -51,10 +64,16 @@ class LocalObject extends BaseModel
 
     }
 
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function getUsers()
     {
 
-        return $this->hasMany(User::class);
+        return $this->hasMany(User::class, 'local_id');
 
     }
+
+
 }

@@ -10,7 +10,7 @@
 
 
     <!-- Scripts -->
-    <script src="/public/js/app.js"></script>
-    @yield('js');
+    <script src="js/app.js"></script>
+    @yield('js')
 </body>
 </html>

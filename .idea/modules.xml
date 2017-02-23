@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/message_builder.iml" filepath="$PROJECT_DIR$/.idea/message_builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/site.local.iml" filepath="$PROJECT_DIR$/.idea/site.local.iml" />
     </modules>
   </component>
 </project>

@@ -9,7 +9,7 @@
     <title>{{ config('app.name', '') }}</title>
 
     <!-- Styles -->
-    <link href="../../resources/assets/css/app.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
     <!-- font awesome -->
     <script src="https://use.fontawesome.com/712fa4a1f3.js"></script>
     <!-- Scripts -->

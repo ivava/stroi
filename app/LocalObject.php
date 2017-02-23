@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 use App\User;
 class LocalObject extends BaseModel
 {
+    /**
+     *
+     */
+    const REGION = 'region';
+
+
+    /**
+     * @var string mysql table
+     */
+    protected $table = 'local_objects';
 
     /**
      * @param $type
@@ -15,7 +25,7 @@ class LocalObject extends BaseModel
     public static function getObjectByType($type)
     {
 
-        return self::where('type', $type);
+        return self::where('type', $type)->get();
 
     }
 

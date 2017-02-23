@@ -17,21 +17,10 @@ class UsersTableSeeder extends Seeder
                 'name' => 'ivan',
                 'email' => 'ivan',
                 'password' => bcrypt('anna'),
-                'departament' => 1,
+                'isAdmin' => true,
                 'position' => 'cio',
                 'parent_user' => 0,
-                'city' => 1,
-                'region' => 1
-            ],
-            [
-                'name' => 'Anna',
-                'email' => 'anna',
-                'password' => bcrypt('e24c2a16'),
-                'departament' => 1,
-                'position' => 2,
-                'parent_user' => 1,
-                'city' => 1,
-                'region' => 1
+                'local_id' => 1,
             ]
         ]);
     }

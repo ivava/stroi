@@ -18,6 +18,7 @@ class CreateLocalObjcetsigrations extends Migration
            $table->string('name');
            $table->integer('parent_id');
            $table->integer('lead_id');
+           $table->string('type');
         });
     }
 
@@ -28,6 +29,6 @@ class CreateLocalObjcetsigrations extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExist('local_objects');
     }
 }

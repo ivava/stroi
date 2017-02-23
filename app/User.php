@@ -26,7 +26,7 @@ class User extends BaseUser
     public function getParentLocal()
     {
 
-        return $this->belongsTo(LocalObject::class);
+        return $this->belongsTo(LocalObject::class, 'local_id');
 
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\LocalObject;
 use App\User;
 use App\Region;
 use App\City;
@@ -17,7 +18,7 @@ class UserController extends Controller
      */
     public function show($id) {
         $user = User::findOrFail($id);
-        $region = Region::findOrFail($user->region);
+        $region = $user->getParentLocal;
         if(is_null($user)) {
             abort(404);
         }
@@ -28,12 +29,13 @@ class UserController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function profile() {
+    public function profile()
+    {
+
         $user = Auth::user();
-        $region = $user->getRegion;
-        $city = $user->getCity;
-        $departament = $user->getDepartament;
-        $regions = Region::all();
-        return view('users.profile', compact('user', 'region', 'regions', 'city', 'departament'));
+        $region = $user->getParentLocal;
+
+        return view('users.profile', compact('user', 'region'));
+
     }
 }

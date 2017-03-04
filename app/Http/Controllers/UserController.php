@@ -35,8 +35,8 @@ class UserController extends Controller
 
         $user = Auth::user();
         $region = $user->getParentLocal;
-
-        return view('users.profile', compact('user', 'region'));
+        $locales = LocalObject::getAllLocalObjects();
+        return view('users.show', compact('user', 'region', 'locales'));
 
     }
 }

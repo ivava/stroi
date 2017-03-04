@@ -10,8 +10,18 @@ class LocalObject extends BaseModel
     /**
      *
      */
-    const REGION = 'region';
+    const REGION_TYPE = 'region';
 
+
+    /**
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'parent_id',
+        'lead_id',
+        'type'
+    ];
 
     /**
      * @var string mysql table
@@ -24,9 +34,7 @@ class LocalObject extends BaseModel
      */
     public static function getObjectByType($type)
     {
-
         return self::where('type', $type)->get();
-
     }
 
     /**
@@ -35,7 +43,8 @@ class LocalObject extends BaseModel
     public static function getAllLocalObjects()
     {
 
-        $regions = self::getObjectByType(self::REGION);
+        $regions = self::getObjectByType(self::REGION_TYPE);
+
         return array(
             'regions' => $regions
         );

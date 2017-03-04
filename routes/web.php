@@ -28,7 +28,7 @@ Route::get('/all', 'UserListController@allUsers');
 
 Route::get('/regions', 'RegionsController@index');
 
-Route::get('/regions/create', 'RegionsController@create');
+Route::get('/regions/create', 'PagesController@createLocal');
 
 
 Route::get('/allcreate', function () {
@@ -36,7 +36,7 @@ Route::get('/allcreate', function () {
 });
 
 
-Route::post('/regions', 'RegionsController@store');
+Route::post('/regions', 'PagesController@localObjectStore');
 
 Route::get('/cities', 'CitiesController@index');
 

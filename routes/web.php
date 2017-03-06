@@ -28,7 +28,7 @@ Route::get('/all', 'UserListController@allUsers');
 
 Route::get('/regions', 'RegionsController@index');
 
-Route::get('/regions/create', 'PagesController@createLocal');
+Route::get('/regions/create', 'PagesController@createLocalObject');
 
 
 Route::get('/allcreate', function () {

@@ -13,9 +13,13 @@
         {!! Form::label('name', 'Название:') !!}
         {!! Form::text('name', null, ['class' => 'form-control']) !!}
         {!! Form::label('parent_id', 'Родительский регион') !!}
-        <label for="parantId"></label>
-        <select name="parent_id" id="parentId">
-            // TODO: здесь вывоятся все типы
+        // TODO: input parent id
+        <select name="type" id="type">
+            @if($types)
+                @foreach($types as $type)
+                    <option value="{{ $type['alias'] }}">{{ $type['name'] }}</option>
+                    @endforeach
+                @endif
         </select>
         <br />
     {!! Form::submit('Создать') !!}

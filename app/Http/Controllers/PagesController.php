@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\LocaleType;
 use Illuminate\Http\Request;
 use App\LocalObject;
 use Validator;
@@ -40,9 +41,10 @@ class PagesController extends Controller
     public function createLocalObject()
     {
 
+        $types = LocaleType::getTypes();
         $locales = LocalObject::getAllLocalObjects();
 
-        return view('regions.create', compact('locales'));
+        return view('regions.create', compact('locales', 'types'));
 
     }
 

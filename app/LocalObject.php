@@ -43,10 +43,16 @@ class LocalObject extends BaseModel
     public static function getAllLocalObjects()
     {
 
-        $regions = self::getObjectByType(self::REGION_TYPE);
+
+        $types = LocaleType::getTypes();
+        $regions = self::getObjectByType($types['region']['alias']);
+        $area = self::getObjectByType($types['area']['alias']);
+        $branch = self::getObjectByType($types['branch']['alias']);
 
         return array(
-            'regions' => $regions
+            'regions' => $regions,
+            'area' => $area,
+            'branch' => $branch
         );
 
     }
@@ -58,7 +64,7 @@ class LocalObject extends BaseModel
     public function getChild()
     {
 
-        return self::where('parent_id', $this->id);
+        return self::where('parent_id', $this->id)->get();
 
     }
 

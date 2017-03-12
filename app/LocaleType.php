@@ -17,6 +17,14 @@ class LocaleType extends ObjectType
         'region' => [
             'alias' => 'region',
             'name' => 'регион'
+        ],
+        'area' => [
+            'alias' => 'area',
+            'name' => 'Область'
+        ],
+        'branch' => [
+            'alias' => 'branch',
+             'name' => 'пасп/паспч'
         ]
     ];
 

@@ -28,7 +28,7 @@ body {
   padding: 15% 0;
 }
 
-.form .body_form input {
+.form input {
   display: block;
   width: 70%;
   margin: 0 auto;
@@ -36,12 +36,12 @@ body {
   text-transform: uppercase;
 }
 
-.form .body_form .input_text {
+.form .input_text {
   padding: 8px;
   border-radius: 5px;
 }
 
-.form .body_form .input_button {
+.form .input_text .input_button {
   padding: 8px;
   border-radius: 5px;
   background-color: #1dabb7;
@@ -79,6 +79,10 @@ i.fa {
 
 .form-group input {
   width: 150px !important;
+}
+
+input, select {
+  display: block !important;
 }
 
 /*!

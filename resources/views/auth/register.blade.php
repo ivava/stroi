@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{--@extends('layouts.app')--}}
 
 @section('content')
 <div class="container">
@@ -36,53 +36,39 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('region') ? 'has-error' : '' }}">
-                            <label for="region" class="col-md-4 control-label">Регион</label>
-                            <div class="col-md-6">
-                               <select name="region" id="region">
-                                   @foreach($regions as $region)
-                                       <option value="{{ $region->id }}">{{ $region->name }}</option>
-                                       @endforeach
-                               </select>
-                                @if ($errors->has('region'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('region') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-group{{ $errors->has('city') ? 'has-error' : '' }}">
-                            <label for="city" class="col-md-4 control-label">Город</label>
-                            <div class="col-md-6">
-                               <select name="city" id="city">
-                                   @foreach($cities as $city)
-                                       <option value="{{ $city->id }}">
-                                           {{ $city->name }}
-                                       </option>
-                                       @endforeach
-                               </select>
-                                @if ($errors->has('city'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('city') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-group{{ $errors->has('region') ? 'has-error' : '' }}">
-                            <label for="region" class="col-md-4 control-label">Отдел</label>
-                            <div class="col-md-6">
-                                <select name="departament" id="departament">
-                                    @foreach($departaments as $departament)
-                                        <option value="{{ $departament->id }}">{{ $departament->name }}</option>
-                                    @endforeach
-                                </select>
-                                @if ($errors->has('departament'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('departament') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+
+                        {{--<div class="form-group{{ $errors->has('city') ? 'has-error' : '' }}">--}}
+                            {{--<label for="city" class="col-md-4 control-label">Город</label>--}}
+                            {{--<div class="col-md-6">--}}
+                               {{--<select name="city" id="city">--}}
+                                   {{--@foreach($cities as $city)--}}
+                                       {{--<option value="{{ $city->id }}">--}}
+                                           {{--{{ $city->name }}--}}
+                                       {{--</option>--}}
+                                       {{--@endforeach--}}
+                               {{--</select>--}}
+                                {{--@if ($errors->has('city'))--}}
+                                    {{--<span class="help-block">--}}
+                                        {{--<strong>{{ $errors->first('city') }}</strong>--}}
+                                    {{--</span>--}}
+                                {{--@endif--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="form-group{{ $errors->has('region') ? 'has-error' : '' }}">--}}
+                            {{--<label for="region" class="col-md-4 control-label">Отдел</label>--}}
+                            {{--<div class="col-md-6">--}}
+                                {{--<select name="departament" id="departament">--}}
+                                    {{--@foreach($departaments as $departament)--}}
+                                        {{--<option value="{{ $departament->id }}">{{ $departament->name }}</option>--}}
+                                    {{--@endforeach--}}
+                                {{--</select>--}}
+                                {{--@if ($errors->has('departament'))--}}
+                                    {{--<span class="help-block">--}}
+                                        {{--<strong>{{ $errors->first('departament') }}</strong>--}}
+                                    {{--</span>--}}
+                                {{--@endif--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                         <div class="form-group{{ $errors->has('position') ? 'has-error' : '' }}">
                             <label for="position"  class="col-md-4 control-label">Должность</label>
                             <div class="col-md-6">

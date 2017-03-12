@@ -22,33 +22,21 @@ Route::get('/profile', 'UserController@profile');
 
 Route::get('/page', 'pageController@index');
 
-Route::get('/all', 'UserListController@allUsers');
 
 
-
-Route::get('/regions', 'RegionsController@index');
 
 Route::get('/regions/create', 'PagesController@createLocalObject');
 
 
-Route::get('/allcreate', function () {
-    return view('allcreate');
-});
 
 
 Route::post('/regions', 'PagesController@localObjectStore');
 
-Route::get('/cities', 'CitiesController@index');
+Route::get('/regions', 'PagesController@showAllLocal');
 
-
-
-Route::get('/cities/create', 'CitiesController@create');
-
-Route::post('/cities', 'CitiesController@store');
 
 Route::get('/users/{id}', 'UserController@show');
 
-Route::get('/cities/{id}', 'CitiesController@show');
 
 Route::get('/regions/{id}', 'PagesController@showLocale');
 

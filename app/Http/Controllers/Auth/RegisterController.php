@@ -65,6 +65,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -74,6 +75,7 @@ class RegisterController extends Controller
             'parent_user' => $data['parent_user'],
             'region' => $data['region'],
             'city' => $data['city']
+
         ]);
     }
 }

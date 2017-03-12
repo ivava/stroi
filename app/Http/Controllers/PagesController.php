@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\LocaleType;
+use App\User;
 use Illuminate\Http\Request;
 use App\LocalObject;
 use Validator;
@@ -43,8 +44,9 @@ class PagesController extends Controller
 
         $types = LocaleType::getTypes();
         $locales = LocalObject::getAllLocalObjects();
-
-        return view('regions.create', compact('locales', 'types'));
+        $allLocales = LocalObject::all();
+        $users = User::all();
+        return view('regions.create', compact('locales', 'types', 'users', 'allLocales'));
 
     }
 
@@ -59,14 +61,15 @@ class PagesController extends Controller
             'name' => 'required||min:5'
         ]);
 
-        Region::create([
+        LocalObject::create([
             'name' => $request->name,
-            'parent_id' => $request->name,
+            'parent_id' => $request->parent_id,
             'lead_id' => $request->lead_id,
             'type' => $request->type
         ]);
 
-        return redirect('/regions');
+        \Flash::success('Молодец Максим, ты создал новый регион');
+        return redirect('/regions/create');
 
     }
 

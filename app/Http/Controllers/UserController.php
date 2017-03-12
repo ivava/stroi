@@ -16,7 +16,9 @@ class UserController extends Controller
      * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show($id) {
+    public function show($id)
+    {
+
         $user = User::findOrFail($id);
         $region = $user->getParentLocal;
         $locales = LocalObject::getAllLocalObjects();
@@ -24,6 +26,7 @@ class UserController extends Controller
             abort(404);
         }
         return view('users.show', compact('user', 'region', 'locales'));
+
     }
 
 

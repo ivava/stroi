@@ -1,7 +1,17 @@
 @charset "UTF-8";
-@import url(../resources/css/jstree.css);
+@import url(../css/jstree.css);
+@font-face {
+  src: url("../fonts/impact.ttf");
+  font-family: Impact;
+}
+
 body {
-  font-family: 'Open Sans';
+  font-family: Impact;
+  background-color: #000;
+}
+
+.hyi_9 {
+  color: #121;
 }
 
 .form {
@@ -28,7 +38,7 @@ body {
   padding: 15% 0;
 }
 
-.form .body_form input {
+.form input {
   display: block;
   width: 70%;
   margin: 0 auto;
@@ -36,12 +46,12 @@ body {
   text-transform: uppercase;
 }
 
-.form .body_form .input_text {
+.form .input_text {
   padding: 8px;
   border-radius: 5px;
 }
 
-.form .body_form .input_button {
+.form .input_text .input_button {
   padding: 8px;
   border-radius: 5px;
   background-color: #1dabb7;
@@ -79,6 +89,10 @@ i.fa {
 
 .form-group input {
   width: 150px !important;
+}
+
+input, select {
+  display: block !important;
 }
 
 /*!

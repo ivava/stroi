@@ -1,3 +1,3 @@
-<div class="sidebar">
-    @include('include.regions_hierarhy')
-</div>
+<div class="sidebar shadow">
+    @include('include.regions_hierarhy')
+</div>

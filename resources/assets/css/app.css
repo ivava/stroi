@@ -1,16 +1,89 @@
 @charset "UTF-8";
 @import url(../css/jstree.css);
-body {
-  font-family: 'Open Sans';
+@font-face {
+  src: url("../fonts/impact.ttf");
+  font-family: Impact;
 }
 
-.form {
+@font-face {
+  src: url("../fonts/PROXIMAEC.OTF");
+  font-family: ProximaEC;
+}
+
+body {
+  font-family: ProximaEC !important;
+  position: relative;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+body.pink {
+  background-color: #FF4040 !important;
+}
+
+body.normal {
+  background-color: #fff !important;
+}
+
+body.normal .content_app {
+  color: #212121 !important;
+}
+
+body.normal .content_app a {
+  color: #212121 !important;
+}
+
+body .margin_50 {
+  width: 50px;
+  height: 100px;
+}
+
+body .shadow {
+  box-shadow: 0px 2px 10px -3px #212121;
+}
+
+body .fcking_bootstrap {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body .change_color {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  opacity: 0.4;
+  display: block;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+body .change_color.pink {
+  background-color: #FF4040;
+}
+
+body .change_color:hover {
+  opacity: 1;
+}
+
+body button {
+  background-color: #415878 !important;
+  text-transform: uppercase !important;
+  font-size: 16px;
+}
+
+body .form {
   width: 350px;
   margin: 0 auto;
   text-transform: uppercase;
 }
 
-.form .header_form {
+body .form .header_form {
   background-color: #222222;
   color: #ffffff;
   font-size: 1.2em;
@@ -20,7 +93,7 @@ body {
   text-align: center;
 }
 
-.form .body_form {
+body .form .body_form {
   border: 1px solid black;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -28,7 +101,7 @@ body {
   padding: 15% 0;
 }
 
-.form .body_form input {
+body .form input {
   display: block;
   width: 70%;
   margin: 0 auto;
@@ -36,49 +109,223 @@ body {
   text-transform: uppercase;
 }
 
-.form .body_form .input_text {
+body .form .input_text {
   padding: 8px;
   border-radius: 5px;
 }
 
-.form .body_form .input_button {
+body .form .input_text .input_button {
   padding: 8px;
   border-radius: 5px;
   background-color: #1dabb7;
 }
 
-li {
+body li {
   font-size: 12px;
 }
 
-i.fa {
+body i.fa {
   font-size: 24px;
   padding: 10px;
 }
 
-.navbar {
+body .navbar {
   min-height: 80px;
 }
 
-.border {
+body .border {
   border-right: 1px solid gray;
 }
 
-.fa-search {
+body .fa-search {
   font-size: 12px !important;
   padding: 0 !important;
 }
 
-.search_top {
+body .search_top {
   line-height: 70px;
 }
 
-.navbar-brand {
+body .navbar-brand {
   padding: 25px;
 }
 
-.form-group input {
+body .form-group input {
   width: 150px !important;
+}
+
+body input, body select {
+  display: block !important;
+}
+
+body .panel {
+  color: #212121 !important;
+  box-shadow: 0px 2px 10px -3px #212121;
+}
+
+nav.navbar.navbar-default {
+  background-color: #415878;
+  border: none;
+  padding: 0;
+  margin-bottom: 0;
+  z-index: 2;
+}
+
+nav.navbar.navbar-default::after {
+  content: '';
+  display: block;
+  background-image: url("../images/border.jpg");
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 15px;
+  width: 100%;
+}
+
+nav.navbar.navbar-default .navbar-header {
+  float: left;
+}
+
+nav.navbar.navbar-default .navbar-header a.navbar-brand {
+  height: 100%;
+  max-height: 100px;
+  width: 215px;
+  color: #fff;
+  padding: 15px 15px !important;
+}
+
+nav.navbar.navbar-default .navbar-header a.navbar-brand::before {
+  content: '';
+  background: url("../images/logo.gif");
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+}
+
+nav.navbar.navbar-default .navbar-header a.navbar-brand span {
+  font-family: Impact;
+  color: #fff;
+  float: right;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-top: 8px;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse {
+  padding: 0;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse ul.nav.navbar-nav li a {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 21px;
+  padding-right: 21px;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  height: 100px;
+  line-height: 1.1;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse ul.nav.navbar-nav li a i {
+  color: #fff;
+  padding: 0;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse ul.nav.navbar-nav li a i.fa {
+  padding: 8px 1px;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse ul.nav.navbar-nav li:hover a {
+  color: #212121;
+  background-color: #e7e7e7;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse ul.nav.navbar-nav li:hover a i {
+  color: #212121;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse ul.nav.navbar-nav li.li_last {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse .navbar-form {
+  width: 220px;
+  padding: 0;
+  margin: 0;
+  height: 100px;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse .navbar-form ul {
+  height: 100px;
+  padding-top: 6px;
+  padding-left: 12px;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse .navbar-form ul li a {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse .navbar-form ul li a:hover {
+  background: transparent;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse .navbar-form ul li a:focus {
+  background: transparent;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse .navbar-form ul li a .user_info_head {
+  width: 90%;
+  display: inline-block;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse .navbar-form ul li ul.dropdown-menu {
+  height: auto;
+  background-color: #415878;
+  color: #fff;
+  min-width: 220px;
+  border: none;
+  border-radius: 0px !important;
+  border-top: 1px solid #fff;
+}
+
+nav.navbar.navbar-default .collapse.navbar-collapse .navbar-form ul li ul.dropdown-menu li a:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.sidebar {
+  position: relative;
+  background-color: #415878 !important;
+  padding-top: 20px;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.user_auth {
+  margin-left: 13% !important;
+  padding-top: 20px;
+}
+
+.content_app {
+  padding-top: 20px;
+  color: #fff !important;
+}
+
+.content_app .info-profile p {
+  font-size: 16px;
+}
+
+.content_app .info-profile p span {
+  font-size: 18px;
+}
+
+.content_app .info-profile p a {
+  color: #fff;
+  font-size: 18px;
 }
 
 /*!

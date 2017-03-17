@@ -1,5 +1,3 @@
-<div class="col-md-3">
-<div class="sidebar">
+<div class="sidebar shadow">
     @include('include.regions_hierarhy')
-</div>
 </div>

@@ -1,7 +1,11 @@
 body {
-  font-family: 'Open Sans';
+  font-family: ProximaEC !important;
+  background-color: #000 !important;
 }
-
+.margin_50 {
+  width: 50px;
+  height: 100px;
+}
 .form {
   width: 350px;
   margin: 0 auto;

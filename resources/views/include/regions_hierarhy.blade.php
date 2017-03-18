@@ -13,6 +13,13 @@
                                 <ul>
                                     @foreach($area->getChild() as $branch)
                                         <li>{{ $branch->name }}</li>
+                                        @if ($branch->getChild())
+                                            <ul>
+                                            @foreach($branch->getChild() as $item)
+                                                <li>{{ $item->name }}</li>
+                                                @endforeach
+                                            </ul>
+                                            @endif
                                         @endforeach
                                 </ul>
                                 @endif

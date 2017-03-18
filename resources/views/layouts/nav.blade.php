@@ -16,8 +16,8 @@
             <ul class="nav navbar-nav text-center">
                 <li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i><br>Обновить</a></li>
                 <li><a href="#"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i><i class="fa fa-arrow-circle-up" aria-hidden="true"></i><br>Развернуть/<br>Свернуть</a></li>
-                <li><a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i><br>Добавить</a></li>
-                <li><a href="#"><i class="fa fa-times-circle" aria-hidden="true"></i><br>Удалить</a></li>
+                <li><a href={{ url('/regions/create') }}><i class="fa fa-plus-circle" aria-hidden="true"></i><br>Добавить</a></li>
+                <li><a href={{ url('/regions/') }}><i class="fa fa-times-circle" aria-hidden="true"></i><br>Удалить</a></li>
                 <li><a href="#"><i class="fa fa-check-circle" aria-hidden="true"></i><br>Запомнить</a></li>
                 <li class="margin_50"></li>
                 <li><a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><br>Отчеты</a></li>

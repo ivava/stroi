@@ -30,9 +30,13 @@ Route::get('/regions/create', 'PagesController@createLocalObject');
 
 
 
+
+
 Route::post('/regions', 'PagesController@localObjectStore');
 
-Route::get('/regions', 'PagesController@showAllLocal');
+Route::get('/regions', 'PagesController@showAllLocale');
+
+Route::get('/regions/delete/{id}', 'PagesController@deleteLocale');
 
 
 Route::get('/users/{id}', 'UserController@show');

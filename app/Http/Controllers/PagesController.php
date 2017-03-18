@@ -73,6 +73,32 @@ class PagesController extends Controller
 
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showAllLocale()
+    {
+
+        $locales = LocalObject::paginate(30);
+        $types = LocaleType::getTypes();
+
+        return view('regions.all', compact('locales', 'types'));
+
+    }
+
+    /**
+     * @param $id
+     */
+    public function deleteLocale($id)
+    {
+
+        LocalObject::destroy($id);
+
+        \Flash::success('Регион удален :(');
+        return redirect('/regions/');
+
+    }
+
 
 
 

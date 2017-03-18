@@ -74,8 +74,8 @@ class LocalObject extends BaseModel
      */
     public function getParent()
     {
-
-        return $this->parent_id;
+        $parent = self::where('id', $this->parent_id)->first();
+        return $parent;
 
     }
 

@@ -1,84 +1,136 @@
 body {
   font-family: ProximaEC !important;
-  background-color: #000 !important;
-}
-.margin_50 {
-  width: 50px;
-  height: 100px;
-}
-.form {
-  width: 350px;
-  margin: 0 auto;
-  text-transform: uppercase;
-  .header_form {
-    background-color: #222222;
-    color: #ffffff;
-    font-size: 1.2em;
-    height: 65px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    text-align: center;
+  position: relative;
+  transition: all .3s;
+  &.pink {
+    background-color: $pink !important;
   }
-  .body_form {
-    border: 1px solid black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    height: auto;
-    padding: 15% 0;
-  }
-  input {
-    display: block;
-    width: 70%;
-    margin: 0 auto;
-    font-size: 1em;
-    text-transform: uppercase;
-  }
-  .input_text {
-    padding: 8px;
-    border-radius: 5px;
-    .input_button {
-      padding: 8px;
-      border-radius: 5px;
-      background-color: #1dabb7;
+  &.normal {
+    background-color: $text_primary !important;
+    .content_app {
+      color: $text_dark !important;
+      a {
+        color: $text_dark !important;
+      }
     }
   }
-}
-
-li {
-  font-size: 12px;
-}
-
-i.fa {
-  font-size: 24px;
-  padding: 10px;
-}
-
-.navbar {
-  min-height: 80px;
-}
-
-.border {
-  border-right: 1px solid gray;
-}
-
-.fa-search {
-  font-size: 12px !important;
-  padding: 0 !important;
-}
-
-.search_top {
-  line-height: 70px;
-}
-
-.navbar-brand {
-  padding: 25px;
-}
-
-.form-group {
-  input {
-    width: 150px !important;
+  .margin_50 {
+    width: 50px;
+    height: 100px;
   }
-}
-input, select {
-  display: block !important;
+
+  .shadow {
+    box-shadow: 0px 2px 10px -3px #212121;
+  }
+  .fcking_bootstrap {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .change_color {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    opacity: 0.4;
+    display: block;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    transition: all .4s;
+    &.pink {
+      background-color: $pink;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  button {
+    background-color: $header !important;
+    text-transform: uppercase !important;
+    font-size: 16px;
+  }
+  .form {
+    width: 350px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    .header_form {
+      background-color: #222222;
+      color: #ffffff;
+      font-size: 1.2em;
+      height: 65px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      text-align: center;
+    }
+    .body_form {
+      border: 1px solid black;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      height: auto;
+      padding: 15% 0;
+    }
+    input {
+      display: block;
+      width: 70%;
+      margin: 0 auto;
+      font-size: 1em;
+      text-transform: uppercase;
+    }
+    .input_text {
+      padding: 8px;
+      border-radius: 5px;
+      .input_button {
+        padding: 8px;
+        border-radius: 5px;
+        background-color: #1dabb7;
+      }
+    }
+  }
+
+  li {
+    font-size: 12px;
+  }
+
+  i.fa {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .navbar {
+    min-height: 80px;
+  }
+
+  .border {
+    border-right: 1px solid gray;
+  }
+
+  .fa-search {
+    font-size: 12px !important;
+    padding: 0 !important;
+  }
+
+  .search_top {
+    line-height: 70px;
+  }
+
+  .navbar-brand {
+    padding: 25px;
+  }
+
+  .form-group {
+    input {
+      width: 150px !important;
+    }
+  }
+  input, select {
+    display: block !important;
+  }
+  .panel {
+    color: $text_dark !important;
+    box-shadow: 0px 2px 10px -3px #212121;
+  }
 }

@@ -25,6 +25,10 @@ class LocaleType extends ObjectType
         'branch' => [
             'alias' => 'branch',
              'name' => 'пасп/паспч'
+        ],
+        'rostch' => [
+            'alias' => 'rostch',
+            'name' => 'Новый тип, который я не знаю как назвать'
         ]
     ];
 

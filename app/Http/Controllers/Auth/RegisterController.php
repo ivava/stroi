@@ -39,7 +39,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        // $this->middleware('guest');
     }
 
     /**
@@ -66,16 +66,17 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-            'position' => $data['position'],
-            'departament' => $data['departament'],
-            'parent_user' => $data['parent_user'],
-            'region' => $data['region'],
-            'city' => $data['city']
+        // return User::create([
+        //     'name' => $data['name'],
+        //     'email' => $data['email'],
+        //     'password' => bcrypt($data['password']),
+        //     'position' => $data['position'],
+        //     'departament' => $data['departament'],
+        //     'parent_user' => $data['parent_user'],
+        //     'region' => $data['region'],
+        //     'city' => $data['city']
 
-        ]);
+        // ]);
+        return redirect('/regions/');
     }
 }

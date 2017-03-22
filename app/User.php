@@ -15,8 +15,7 @@ class User extends BaseUser
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','position','isAdmin','parent_user','departament','region',
-        'city'
+        'name', 'email', 'password','position','isAdmin','parent_user', 'local_id'
     ];
 
 

@@ -16,7 +16,15 @@
                                         @if ($branch->getChild())
                                             <ul>
                                             @foreach($branch->getChild() as $item)
-                                                <li>{{ $item->name }}</li>
+                                                <li>{{ $item->name }}
+                                                    @if ($item->user)
+                                                        <ul>
+                                                            @foreach($item->user as $user)
+                                                                <li>{{ $user->name }}</li>
+                                                                @endforeach
+                                                        </ul>
+                                                        @endif
+                                                </li>
                                                 @endforeach
                                             </ul>
                                             @endif

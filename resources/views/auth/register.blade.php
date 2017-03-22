@@ -84,14 +84,30 @@
                         <div class="form-group{{ $errors->has('parent_user') ? 'has-error' : '' }}">
                             <label for="parent_user" class="col-md-4 control-label">Руководитель</label>
                             <div class="col-md-6">
-                                <input id="parent_user" type="text" class="form-control" name="parent_user"
-                                       value="{{ old('parent_user') }}" required/>
-                                @if ($errors->has('parent_user'))
-                                    <strong>{{ $errors->first('parent_user') }}</strong>
+                                @if ($usersCollection)
+                                        <select name="parent_user" id="parent_user">
+                                            @foreach($usersCollection as $user)
+                                                <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                                @endforeach
+                                        </select>
                                     @endif
 
                             </div>
                         </div>
+
+
+                        <div class="form-group{{ $errors->has('local') ? 'has-error' : '' }}">
+                            <label for="local" class="col-md-4 control-label">ПАСПЧ</label>
+                            @if ($locales['branch'])
+                            <select name="local_id"  id="local">
+                                @foreach($locales['branch'] as $locale)
+                                    <option value="{{ $locale->id }}">{{ $locale->name }}</option>
+                                    @endforeach
+                            </select>
+                                @endif
+
+                        </div>
+
                         {{--<div class="form-group">--}}
                             {{--<label>Админ?</label>--}}
                             {{--<input type="checkbox" name="is_admin" value="true" id="is_admin" />--}}

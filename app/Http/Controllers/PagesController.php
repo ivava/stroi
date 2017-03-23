@@ -100,6 +100,25 @@ class PagesController extends Controller
     }
 
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showAddTaskForm()
+    {
+        $locales = LocalObject::getAllLocalObjects();
+        return view('tasks.add', compact('locales'));
+
+    }
+
+    public function taskStore()
+    {
+
+        \Flash::success('Данные успешно сохранены');
+        return redirect('tasks/add');
+
+    }
+
+
 
 
 }

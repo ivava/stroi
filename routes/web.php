@@ -44,6 +44,10 @@ Route::get('/users/{id}', 'UserController@show');
 
 Route::get('/regions/{id}', 'PagesController@showLocale');
 
+Route::get('/tasks/add', 'PagesController@showAddTaskForm');
+
+Route::post('/tasks/add', 'PagesController@taskStore');
+
 
 
 
